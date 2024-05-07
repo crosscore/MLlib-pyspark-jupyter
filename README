@@ -1,0 +1,19 @@
+# Build the Docker image
+docker build -t pyspark-image .
+
+# Check the list of installed Docker images
+docker image ls
+
+# When docker-compose.yml has not been created.
+docker run -it --rm -p 8888:8888 -v ${PWD}:/home/jovyan/work pyspark-image
+docker stop {CONTAINER ID}
+
+# When docker-compose.yml has been created
+docker compose up -d
+docker compose down
+
+# Delete Docker image
+docker rmi pyspark-image
+
+# Check the list of running Docker images
+docker ps
