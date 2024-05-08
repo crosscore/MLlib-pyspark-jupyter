@@ -2,7 +2,7 @@ FROM jupyter/pyspark-notebook
 
 USER root
 
-RUN pip install --no-cache-dir --upgrade nbdime jupyterlab-git && \
-    jupyter labextension update --all
+COPY requirements.txt /tmp/
+RUN pip install --no-cache-dir --requirement /tmp/requirements.txt
 
 USER $NB_UID
