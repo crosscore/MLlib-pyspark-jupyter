@@ -1,2 +1,4 @@
 .DS_Store
 data/
+jdbc_driver/
+.ipynb_checkpoints/

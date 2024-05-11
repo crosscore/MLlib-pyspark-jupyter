@@ -2,3 +2,4 @@ nbdime
 jupyterlab-git
 ydata-profiling[all]
 openpyxl
+psycopg2-binary
